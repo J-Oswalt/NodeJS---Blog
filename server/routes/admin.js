@@ -119,6 +119,7 @@ router.get('/add-post', authMiddleware, async (req, res) => {
 
         const data = await Post.find();
         res.render('admin/add-post', {
+        data,
         locals,
         layout: adminLayout
         });
@@ -142,8 +143,8 @@ router.post('/add-post', authMiddleware, async (req, res) => {
                 body: req.body.body
             });
 
-            await post.create(newPost);
-            res.redirect('/dahsboard');
+            await Post.create(newPost);
+            res.redirect('/dashboard');
         } catch (error) {
             console.log(error);
         }
