@@ -7,3 +7,4 @@ To get started:
 
 ##
 Add "/admin" for the admin settings.
+un:admin | pwd:password
