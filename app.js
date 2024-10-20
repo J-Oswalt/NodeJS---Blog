@@ -36,7 +36,7 @@ app.use(express.static('public'));
 //Templates
 app.use(expressLayout);
 app.set('layout', './layouts/main');
-app.set('view engine', "ejs");
+app.set('view engine', 'ejs');
 
 
 app.locals.isActiveRoute = isActiveRoute;
